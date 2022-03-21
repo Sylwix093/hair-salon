@@ -1,0 +1,334 @@
+:root{
+    --green: #435f3b;
+    --beige: #e6e6e4;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+}
+.container{
+position:relative;
+}
+
+header{
+    position:absolute;
+    background-image: url(img/backgroundLeaves.jpg);
+    width:100vw;
+    height:100vh;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navigation ul{
+    position:fixed;
+    top:0;
+    right:0;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100vw;
+    height:10%;
+    background-color: #e6e6e4;
+    color:#333;
+    list-style: none;
+    z-index:99; 
+}
+
+.navigation li{
+     font-size:25px;
+     padding:20px 50px;
+     letter-spacing:1px;
+     cursor: pointer;
+    }
+
+nav{
+    font-weight: 100;
+    
+}
+
+.arrow{
+    /* display:none; */
+    position:fixed;
+    bottom:8%;
+    left: 7%;
+    transform: translate(-50%);
+    z-index:1;
+    transition: 0.5s;
+    padding:10px 10px;
+    border-radius: 100px;
+    border:1px solid #333;
+    cursor: pointer;
+}
+
+
+.show{
+display:block;
+}
+
+
+.reservationBtn{
+    padding:10px 30px;
+    font-size:25px;
+    font-weight:100;
+    letter-spacing:1px;
+    background-color: transparent;
+    border:1px #333 solid;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.logo{
+    position:fixed;
+    top:0;
+    left:0;
+    height:200px;
+    z-index: 99;
+}
+
+nav li:hover{
+    font-weight: 300;
+}
+
+.reservationBtn:hover{
+    color: var(--beige);
+    background-color: #435f3b;
+}
+
+
+.aside{
+    position:fixed;
+    top:0;
+    background-color: #e6e6e4;
+    height:100vh;
+    width: 14%;
+    z-index:5;
+}
+.aboutDiv{
+    display:flex;
+    position:absolute;
+    right:0; 
+    top:100vh;
+    background-color: #e6e6e4;
+    height:80vh;
+    width: calc(100% - 200px);
+    font-size:30px;
+    font-weight: 100;
+    z-index:1;
+
+}
+ .aboutDiv p{
+    padding: 80px 20px;
+}
+.aboutDiv p span{
+    font-size: 50px;
+}
+
+
+
+.cosmeticsDiv{
+    position:absolute;
+    top:180vh;
+    right:0;
+    display: flex;
+    justify-content:space-between;
+    background-color: var(--green);
+    color: var(--beige);
+    width:calc(100% - 14%);
+    height: 90vh;
+    padding:10px;
+}
+
+.cosmeticsDiv div{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:10px;
+    border: 1px var(--beige) solid;
+    border-radius:5px;
+    width:25vw;
+    font-weight: 100;
+}
+
+.cosmeticsDiv div p{
+    width:100%;
+    font-size:20px;
+    padding:0 10px;
+    text-align: center;
+}
+
+.cosmeticsDiv span{
+    text-align: center;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.priceListDiv{
+    position:absolute;
+    right:0;
+    top: 270vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 80vh;
+    width: calc(100% - 14%);
+    background-color: var(--beige);
+    color: #333;
+    font-weight:100;
+    font-size:20px;
+    padding-top: 130px;
+}
+
+.priceListDiv h3{
+    position: absolute;
+    top:3%;
+    right:50%;
+    font-size:40px;
+    font-weight:100;
+    margin:20px 40px;
+    transform: translateX(43%);
+}
+
+.boxOfPrice{
+    display:flex;
+    flex-direction: column;
+    height: 50%;
+    width:25%;
+    margin:0 auto;
+    
+}
+.boxOfPrice h5{
+    font-size:19px;
+    margin-bottom: 15px;
+}
+.priceListDiv p {
+    margin-right: 10px;
+}
+.priceListDiv li {
+    display:flex;
+    list-style: none;
+    margin-right: 10px;
+
+}
+
+.portfolioDiv{
+    position: absolute;
+    width: calc(100% - 14%);
+    top: calc(270vh + 73vh);
+    right:0;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-size:30px;
+    text-align:center;
+    margin:40px 15px 0 14px;
+    background-color: var(--beige);
+}
+
+.portfolioDiv h3{
+    font-size:40px;
+    font-weight:100;
+    margin: 10px 0 40px 0;
+}
+.portfolioDiv .box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:calc(100% - 14%);
+    
+}
+
+.portfolioDiv .box .hair{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+}
+
+.portfolioDiv .box .hair img{
+    margin-bottom: 20px;
+}
+
+
+.howToContact{
+    position: absolute;
+    right:0;
+    top:669vh;
+    width:calc(100% - 14%);
+    background-color: var(--green);
+    color: var(--beige);
+    height:80vh;
+    font-weight:100;
+}
+.numberBtn{
+    display:block;
+    bottom:15%;
+    position:absolute;
+    left:14%;
+    border: 1px var(--beige) solid;
+    border-radius: 20px;
+    font-weight:100;
+    font-size:40px;
+    letter-spacing: 5px;
+    color:var(--beige);
+    background-color: var(--green);
+    padding:32px 70px;
+    cursor: pointer;
+    transition:0.3s linear;
+    z-index:10;
+}
+
+.number{
+display: block;
+position:absolute;
+left:15%;
+bottom: 15%;
+background-color: #333;
+font-weight:100;
+padding:30px 50px;
+letter-spacing: 2px;
+font-size:45px;
+cursor: pointer;
+border-radius: 20px;
+}
+
+.howToContact span{
+    display:block;
+    position:absolute;
+    bottom:70%;
+    font-size:40px;
+    font-weight: 300;
+    left:calc(13% + 4px);  
+    padding: 0 50px 20px 50px;
+    border-bottom: #e6e6e4 solid 1px;
+}
+.follow{
+    position: absolute;
+    bottom:60%;
+    left:25%;
+    font-size: 30px;
+}
+
+.map{
+    position:absolute;
+    width:25vw;
+    height:25vw;
+    right:10%;
+    bottom:15%;
+}
+.footer{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:65px;
+    padding-top: 20px;
+    text-align:center;
+    background-color: #333;
+    color: var(--beige);
+    font-size: 20px;
+    font-weight:100;
+}
